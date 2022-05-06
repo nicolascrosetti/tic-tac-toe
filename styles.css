@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameboard-container{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.cell{
+    border: 1px solid black;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
