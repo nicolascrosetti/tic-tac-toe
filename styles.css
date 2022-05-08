@@ -1,7 +1,16 @@
+button{
+    background-color: cadetblue;
+    border-radius: 8%;
+    padding: 5px;
+    color: white;
+}
 .container{
+    margin-top: 55px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 .gameboard-container{
     border: 1px solid black;

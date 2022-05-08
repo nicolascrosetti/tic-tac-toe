@@ -12,11 +12,20 @@ const gameBoard = (() => {
 })();
 
 const game = (() => {
-    const playerOne = players('Nico', 'X');
-    const playerTwo = players('Computer', 'O');
+    const playerOne = players('Player One', 'X');
+    const playerTwo = players('Player Two', 'O');
     let currentPlayer = playerOne;
     let isOver = false;
     
+    const setPlayers = () => {
+        playersBtn.addEventListener('click', () => {
+            playerOne.name = p1Input.value;
+            playerTwo.name = p2Input.value;
+
+            p1Input.value = '';
+            p2Input.value = '';
+        });
+    }
 
     const addMarks = () => {
         cellsArray.forEach(cell => {
@@ -81,14 +90,18 @@ const game = (() => {
     }
 
     return {
-        addMarks, fillDisplay, checkWinner, checkTie, restart
+        setPlayers, addMarks, fillDisplay, checkWinner, checkTie, restart
     };
 })();
 
 //GET DOM ELEMENTS
 const cellsArray = document.querySelectorAll('.cell');
+const p1Input = document.querySelector('#p1-input');
+const p2Input = document.querySelector("#p2-input");
+const playersBtn = document.querySelector('#players-btn');
 
 //MAIN SECTION
+game.setPlayers();
 game.addMarks();
 
 
