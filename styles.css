@@ -8,12 +8,13 @@
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 166.67px);
+    grid-template-rows: repeat(3, 166.67px);
 }
 
 .cell{
     border: 1px solid black;
     text-align: center;
-    font-size: xx-large;
+    font-size: 100px;
     font-weight: bolder;
 }
