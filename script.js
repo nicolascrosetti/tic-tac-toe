@@ -19,11 +19,14 @@ const game = (() => {
     
     const setPlayers = () => {
         playersBtn.addEventListener('click', () => {
-            playerOne.name = p1Input.value;
-            playerTwo.name = p2Input.value;
-
-            p1Input.value = '';
-            p2Input.value = '';
+            if(p1Input.value){
+                playerOne.name = p1Input.value;
+                p1Input.value = '';
+            }
+            if(p2Input.value){
+                playerTwo.name = p2Input.value;
+                p2Input.value = '';
+            }
         });
     }
 
